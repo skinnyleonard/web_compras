@@ -157,6 +157,41 @@ const products = [
         prod:'Parlante genius HF500A II madera',
         img:'https://diamondsystemar.vtexassets.com/arquivos/ids/158710/6543523132_1.jpg?v=638164057190870000',
         price:'23.000'
-    }
+    },
+    {
+        id: 23,
+        type: 'Procesadores',
+        prod: 'Intel Core i5 9600k S/COOLER',
+        img: 'https://media.ldlc.com/r1600/ld/products/00/05/04/90/LD0005049034_2.jpg',
+        price: '35.960'
+    },
+    {
+        id: 24,
+        type: 'Memorias RAM',
+        prod: 'Memoria RAM Crucial Basics DDR4 8GB',
+        img:'https://logg.api.cygnus.market/static/logg/Global/Memoria%20RAM%20Crucial%20Basics%20DDR4%208GB%202666MHz%20CL19/bfb6f25be34a4ad4b88a0f6d61af6ca1.webp',
+        price: '23.999'
+    },
+    {
+        id: 25,
+        type: 'Placas de video',
+        prod: 'MSI Gaming X Nvidia RTX 2080 Ti',
+        img: 'https://images.nvidia.com/aem-dam/Solutions/geforce/news/geforce-rtx-2080-ti-custom-card-roundup/MSI-1.png',
+        price: '230.000'
+    },
+    {
+        id: 26,
+        type: 'Motherboards',
+        prod: 'MPG Z790 EDGE WIFI',
+        img: 'https://storage-asset.msi.com/global/picture/image/feature/mb/Z790/MPG-Z790-EDGE-WIFI/kv.png',
+        price: '250.000'
+    },
+    {
+        id: 27,
+        type: 'Celulares',
+        prod: 'Samsung Galaxy S22 5G 128GB',
+        img: 'https://tienda.claro.com.ar/staticContent/Claro/images/catalog/productos/646x1000/70009812_3.webp',
+        price:'255.000'
+    },
 ]
 export default products

@@ -1,15 +1,9 @@
 import { useParams } from "react-router-dom";
 import products from "./products";
 import Navbar from "./Navbar";
-import { useEffect, useState } from "react";
 
 function Fullcard({ cart, setCart, updateCart }) {
   const { id } = useParams();
-  // const [ cart, setCart ] = useState([])
-
-  // function updateCart(newArray){
-  //   setCart([...cart, newArray])
-  // }
 
   function handleSubmit(e){
     e.preventDefault()
@@ -18,18 +12,8 @@ function Fullcard({ cart, setCart, updateCart }) {
     updateCart(newArray)
     localStorage.setItem('cart', cart)
     console.log(cart)
+    alert('El producto fue agregado al carrito')
   }
-  // useEffect(()=> {
-  //   let data = localStorage.getItem('cart')
-  //   if(data){
-  //     setCart(JSON.parse(data))
-  //   }
-  // }, [])
-
-  // useEffect(()=> {
-  //   localStorage.setItem('cart', JSON.stringify(cart))
-  // }, [cart])
-
 
   return (
     <>

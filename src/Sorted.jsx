@@ -37,7 +37,7 @@ function Catalog({ prod, img, price, link }) {
     <div className="cards">
       <h1>{prod}</h1>
       <img src={img} alt="" />
-      <h2>precio: {price}</h2>
+      <h2>precio: ${price}</h2>
       <h2>{link}</h2>
     </div>
   );
