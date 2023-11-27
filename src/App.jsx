@@ -7,18 +7,23 @@ import Fullcard from "./Fullcard";
 import Cart from "./Cart";
 import Sorted from "./Sorted";
 
-function App() {
-  const [ newProd, setNewProd ] = useState([])
+function App({ updateCart }) {
+  const [ cart, setCart ] = useState([])
 
-  useEffect(()=> {
+  function updateCart(newArray){
+    setCart([...cart, newArray])
+  }
+
+  useEffect(() => {
     let data = localStorage.getItem('cart')
-    if (data){
-      setNewProd(JSON.parse(data))
+    if (data) {
+      setCart(JSON.parse(data))
     }
   }, [])
+
   useEffect(()=> {
-    localStorage.setItem('cart', JSON.stringify(newProd))
-  }, [ newProd ])
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
   return (
     <>
 
@@ -26,8 +31,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Initial />} />
           <Route exact path="/products" element={<ProductsWindow />} />
-          <Route exact path="/products/:id" element={<Fullcard newProd={newProd} setNewProd={setNewProd}/>}/>
-          <Route exact path="/cart" element={<Cart newProd={newProd} setNewProd={setNewProd}/>}/>
+          <Route exact path="/products/:id" element={<Fullcard cart={cart} setCart={setCart} updateCart={updateCart}/>}/>
+          <Route exact path="/cart" element={<Cart cart={cart} setCart={setCart}/>}/>
           <Route exact path="/products/sortby/:type" element={<Sorted />} />
         </Routes>
       </BrowserRouter>
