@@ -2,45 +2,81 @@
     font-family: 'Swiss 721 BT';
     src: url(fonts/Swiss.ttf);
 }
+@font-face {
+    font-family: lato;
+    src: url(fonts/Uberform.ttf);
+}
+@font-face {
+    font-family: planet;
+    src: url(./fonts/PLANK___.TTF);
+}
+#root{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 body{
-    font-family: 'Swiss 721 BT';
+    font-family: lato;
     background-color: #181818;
     color: rgb(218, 218, 218);
     margin: 0;
 }
-.pub img{
-    width: 85%;
-    display: block;
+.pub{
+    width: 90%;
+    height: 75vh;
     margin: 0 auto;
+}
+.pub img{
+    display: block;
     overflow: hidden;
+    float: left;
+    width: 75%;
 }
 .pub h1{
     position: absolute;
-    top: 75%;
+    top: 20%;
     color: white;
     font-weight: 800;
-    right: 15%;
-    font-size: 45px;
+    right: 10%;
+    font-size: 65px;
     text-align: unset;
+    font-family: "system-ui";
+}
+.pub h6{
+    font-size: 20px;
+    line-height: 0;
+    margin-top: 10px;
 }
 .wow{
     color: white;
     margin-left: 10%;
 }
-.cards {
+.marcas{
+    margin: 0 auto;
     text-align: center;
-    width: 250px;
-    font-size: 10px;
-    background-color: rgb(35 35 35);
-    display: inline-block;
-    padding-bottom: 10px;
-    padding: 3px;
+    color: white;
 }
-.cards a{
+.marcas img{
+    max-width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.cards {
+    width: 270px;
+    padding: 10px;
+    text-align: center;
+    background: #101010;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
     text-decoration: none;
     color: white;
-    padding: 5px;
-    background-color: #0c0237;
+    border: 1px dashed #606060;
 }
 .cards img{
     max-width: 200px;
@@ -48,32 +84,45 @@ body{
 .cards:hover{
     transform: scale(1.03);
     transition: 0.04s;
+    box-shadow: 0px 0px 36px -25px rgba(255,255,255,1);
+}
+.cards div{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .destacado{
-    margin: 0 auto;
-    width: fit-content;
-    padding: 6px;
-    display: grid;
-    display: grid;
-    grid-template-columns: repeat(4, 250px);
-    justify-content: end;
-    gap: 10px 17px;
+    display: flex;
+    float: inline-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
 }
 .navbar ul{
     list-style: none;
+    text-align: center;
 }
 .navbar li a{
     color: white;
 }
-.navbar li a:hover{
-    color: rgb(218, 218, 218);;
-}
 .navbar{
     background-color: #0e0e0e;
+    position: relative;
     z-index: +10;
     display: inline-block;
     width: 100%;
     margin-bottom: 20px;
+}
+.navbar h1{
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin: 10px;
+    font-family: planet;
+    color :white;
 }
 .links li{
     font-size: 19px;
@@ -82,6 +131,11 @@ body{
 }
 .links li a{
     text-decoration: none;
+    display: block;
+}
+.links li a:hover{
+    transform: scale(1.2);
+    transition: ease-in-out 500ms;
 }
 .icons{
     position: absolute;
@@ -93,52 +147,117 @@ body{
     font-size: 26px;
     margin-right: 14px;
     display: inline-block;
+    color: white;
 }
-.icons li i{
+.icons li a{
     text-decoration: none;
 }
-.catalog{
-    display: grid;
-    grid-template-columns: repeat(4, 250px);
-    justify-content: end;
-    column-gap: 17px;
-    grid-row-gap: 10px;
-    margin-right: 30px;
+.icons span{
+    padding: 5px;
+    background: red;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    display: block;
+    right: 0;
+    margin-right: 0;
+    top: -15px;
+    color: white;
+}
+.icons hr{
+    display: inline;
+    transform: rotate(90deg);
+    margin-right: 10px;
+}
+.catalog {
+    display: flex;
+    float: inline-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: fit-content;
+    gap: 15px;
+    width: calc(100% - 270px);
+    justify-content: flex-end;
 }
 .sidebar {
-    display: inline-block;
-    position: absolute;
+    display: inline-flex;
+    max-width: min-content;
     top: 135px;
     margin-top: 0;
     font-size: 12px;
     background-color: rgb(35 35 35);
     height: 100%;
-    padding-left: 10px;
+    padding-left: 20px;
     padding-right: 20px;
     margin-top: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+    border: 1px dashed #606060;
+    box-shadow: -10px 10px 0px 0px #0a0a0a;
 }
 .sidebar a{
     text-decoration: none;
     color: rgb(218, 218, 218);
+    position: relative;
 }
-.sidebar a:hover{
+/* .sidebar a:hover{
     text-decoration: underline;
+} */
+.sidebar a::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background: white;
+    transition: width .2s;
 }
-.p img{
-    background-color: #242424;
+.sidebar a:hover::after{
+    width: 100%;
+}
+.sidebar ul{
+    margin: 0;
+}
+.sidebar li {
+    font-size: 10px;
+    list-style: square;
+    margin-bottom: 20px;
+    position: relative;
+}
+.info img{
     padding: 16px;
     max-height: 330px;
-}
-.p{
-    display: inline-block;
+    border-top: 1px solid black;
     padding: 11px;
-    border-radius: 4px;
-    max-width: fit-content;
-    border: 1px solid black;
+}
+.info{
+    display: inline-block;
+    max-width: 50%;
+    text-overflow: clip;
+}
+.moreInfo{
+    display: inline-block;
+    float: right;
+    max-width: 50%;
+    font-weight: 600;
+}
+.moreInfo li{
+    margin-bottom: 20px;
+    font-family: "system-ui";
+}
+.cartWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
 }
 .cartProd{
     border-bottom: 1px solid #ffffff2e;
-    width: 70%;
+    width: 100%;
     padding-top: 20px;
     margin-left: 20px;
 }
@@ -160,11 +279,12 @@ body{
 .cartProd a{
     text-decoration: none;
     color: white;
-    padding: 5px;
-    background-color: #0c0237;
+    padding: 7px;
+    background-color: #000000;
     position: absolute;
     margin-left: 20px;
     margin-top: 50px;
+    border: 1px dashed grey;
 }
 .right-bar{
     display: inline-block;
@@ -183,4 +303,110 @@ body{
     color: white;
     padding: 5px;
     background-color: #0c0237;
+}
+.cant{
+    padding: 5px;
+    background: red;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    display: block;
+    right: 0;
+    margin-right: 0;
+    top: -15px;
+}
+.fa-arrow-right-arrow-left{
+    transform: rotate(90deg);
+}
+.history, .money{
+    display: flex;
+    flex-direction: row;
+}
+.history img, 
+.money img, 
+.aboutProducts img{
+    max-width: 500px;
+    margin: 20px;
+    margin-bottom: 100px;
+    perspective: 0;
+}
+.aboutProducts{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: end;
+}
+.history ul,
+.aboutProducts ul{
+    list-style: none;
+    padding: 0;
+}
+#footer{
+    border-top: 2px dashed #6b6b6b;
+    position: relative;
+    margin-top: 20px;
+    background: #0e0e0e;
+}
+footer{
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.footerUl{
+    display: inline-flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    padding-right: 25px;
+    margin-bottom: 10px;
+}
+.footerUl li{
+    cursor: pointer;
+}
+.footerUl li:hover{
+    color: rgb(196, 196, 196);
+}
+.copyright{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    line-height: 0;
+}
+.copyright h1{
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-right: 20px;
+    font-family: planet;
+    color :white;
+}
+.footerIcons{
+    display: flex;
+    list-style: none;
+    font-size: 26px;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+}
+.fa-brands{
+    margin-left: 20px;
+}
+.fa-brands:hover{
+    transition: 500ms;
+    transform: rotate(360deg);
+}
+button{
+    border: 1px dashed grey;
+    padding: 7px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(49, 49, 49);
+}
+button:active{
+    color: black;
+    border: 1px dashed black;
+    background-color: white;
 }

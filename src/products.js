@@ -2,6 +2,13 @@ import ryzen5 from '../pngs/ryzen5.png'
 import corei7 from '../pngs/corei7.png'
 import ram from '../pngs/ram.png'
 import monitor from '../pngs/monitor.png'
+import mouse from '../pngs/redragon.webp'
+import firepro from '../pngs/firepro.png'
+import celu from '../pngs/celu.webp'
+import pro from '../pngs/990pro.png'
+import nokia from '../pngs/nokia.png'
+import parlantes from '../pngs/paralantes.png'
+import x3d from '../pngs/x3d.png'
 
 const products = [
     {
@@ -20,10 +27,10 @@ const products = [
     },
     {
         id:3,
-        type:'Otras Cosas',
-        prod:'Decodificador flow box (no sirve para nada)',
-        img:'https://http2.mlstatic.com/D_NQ_NP_627552-MLA71349833650_082023-O.webp',
-        price:'2.50',
+        type:'Perifericos',
+        prod:'Redragon Cobra Chroma M711 White',
+        img: mouse,
+        price:'20.000',
     },
     {
         id:4,
@@ -50,7 +57,7 @@ const products = [
         id:7,
         type:'Motherboards',
         prod:'ASUS ROG STRIX Z590-E GAMING WIFI',
-        img:'https://www.qloud.ar/SITES/IMG/gaming-point-06-2021/221_13-10-2022-03-10-23-hero.png',
+        img:'https://dlcdnwebimgs.asus.com/files/media/B7CBA71A-2549-4C30-843E-15189BB8E78D/V1/img/z590/kv/hero.png',
         price:'120.000',
     },
     {
@@ -69,51 +76,51 @@ const products = [
     },
     {
         id:10,
-        type:'Otras Cosas',
-        prod:'Peluche de Freddy',
-        img:'https://m.media-amazon.com/images/I/71wRtp+WfCL._AC_SL1500_.jpg',
+        type:'Almacenamiento',
+        prod:'Pendrive San Disk',
+        img:'https://www.pngplay.com/wp-content/uploads/12/Usb-Flash-Transparent-Clip-Art-PNG.png',
         price:'6.500',
     },
     {
         id:11,
-        type:'Otras Cosas',
-        prod:'Don Satur bizcochitos',
-        img:'https://jumboargentina.vtexassets.com/arquivos/ids/250105/Bizcochos-Don-Satur-Dulces-200-Gr-1-16176.jpg?v=636388464661330000',
-        price:'250',
+        type:'Perifericos',
+        prod:'Epomaker CIDOO C75',
+        img:'https://epomaker.com/cdn/shop/files/IMG_7337_25746e68-b876-4715-b815-6212e5f2ae11.png?v=1715850096&width=713',
+        price:'139.000',
     },
     {
         id:12,
-        type:'Otras Cosas',
-        prod:'Levite potable de manzana',
-        img:'https://images.openfoodfacts.org/images/products/779/031/500/0880/front_es.16.400.jpg',
-        price:'400',
+        type:'Monitores',
+        prod:'Monitor AOC 144Hz',
+        img:'https://storage.aoc.com/assets/8929/AOC_G2490_PV_FTL-big.png',
+        price:'200.000',
     },
     {
         id:13,
         type:'Celulares',
         prod:'Samsung Gt-c3592 Pantalla Grande 2.4°-tapa C/camara',
-        img:'https://http2.mlstatic.com/D_NQ_NP_684131-MLA69604024692_052023-O.webp',
+        img: celu,
         price:'6.000',
     },
     {
         id:14,
         type:'Perifericos',
-        prod:'Genius DX-100 USB',
-        img:'https://inkgenio.com.ar/5570-large_default/mouse-genius-dx-110-usb.jpg',
-        price:'2.500',
+        prod:'Mousepad Redragon Suzaku U P003',
+        img:'https://acdn.mitiendanube.com/stores/003/998/438/products/p003_pngweb_7-94660fcc653c682a7d17177933155652-1024-1024.png',
+        price:'13.000',
     },
     {
         id:15,
         type:'Perifericos',
-        prod:'Control original Nintendo 64',
-        img:'https://m.media-amazon.com/images/I/91qahZOIs6L.jpg',
+        prod:'Razer Blackshark V2 X',
+        img:'https://cdn.hmv.com/r/w-640/hmv/files/56/564162b3-2964-4255-995f-1b678f40897d.png',
         price:'15.600',
     },
     {
         id:16,
         type: 'Placas de video',
         prod: 'AMD ATI Firepro V4800 1gb',
-        img: 'https://tpucdn.com/gpu-specs/images/c/572-bottom.jpg',
+        img: firepro,
         price:'140.000'
     },
     {
@@ -125,16 +132,16 @@ const products = [
     },
     {
         id:18,
-        type:'Otras Cosas',
-        prod:'Empanadas de carne cortada a cuchillo',
-        img:'https://mambofoods.com/wp-content/uploads/2020/01/Empanada-arg-beef-1000-877x992.png',
+        type:'Almacenamiento',
+        prod:'SAMSUNG 990 PRO Series NVMe SSD cont heatsink - 1TB',
+        img: pro,
         price:'150'
     },
     {
         id:19,
         type:'Celulares',
         prod:'Nokia 3310 Azul Garantia 12 meses',
-        img:'https://i.ebayimg.com/images/g/dLUAAOSw-S1kAr9k/s-l1200.webp',
+        img: nokia,
         price:'30.000'
     },
     {
@@ -154,15 +161,15 @@ const products = [
     {
         id:22,
         type:'Perifericos',
-        prod:'Parlante genius HF500A II madera',
-        img:'https://diamondsystemar.vtexassets.com/arquivos/ids/158710/6543523132_1.jpg?v=638164057190870000',
+        prod:'Parlante Genius SP-HF800A II Madera',
+        img: parlantes,
         price:'23.000'
     },
     {
         id: 23,
         type: 'Procesadores',
-        prod: 'Intel Core i5 9600k S/COOLER',
-        img: 'https://media.ldlc.com/r1600/ld/products/00/05/04/90/LD0005049034_2.jpg',
+        prod: 'Amd Ryzen 7 7800x3d',
+        img: x3d,
         price: '35.960'
     },
     {
@@ -193,5 +200,19 @@ const products = [
         img: 'https://tienda.claro.com.ar/staticContent/Claro/images/catalog/productos/646x1000/70009812_3.webp',
         price:'255.000'
     },
+    {
+        id: 28,
+        type: 'Perifericos',
+        prod: 'Micrófono Logitech Blue Snowball Ice White',
+        img: 'https://logitechar.vtexassets.com/arquivos/ids/157269-800-800?v=637115879566730000&width=800&height=800&aspect=true',
+        price: '50.000'
+    },
+    {
+        id: 29,
+        type: 'Celulares',
+        prod: 'Samsung Galaxy A15 128gb 4gb RAM',
+        img: 'https://images.samsung.com/is/image/samsung/p6pim/ar/sm-a155mzkaaro/gallery/ar-galaxy-a15-sm-a155-sm-a155mzkaaro-541506119?$650_519_PNG$',
+        price: '2.50'
+    }
 ]
 export default products

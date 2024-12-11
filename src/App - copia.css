@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'Swiss 721 BT';
+    src: url(fonts/Swiss.ttf);
+}
+@font-face {
+    font-family: lato;
+    src: url(fonts/LilGrotesk-Bold.otf);
+}
+#root{
+    width: 90%;
+    margin: 0 auto;
+}
+body{
+    font-family: 'system-ui';
+    background-color: #181818;
+    color: rgb(218, 218, 218);
+    margin: 0;
+}
+.pub img{
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.pub h1{
+    position: absolute;
+    top: 75%;
+    color: white;
+    font-weight: 800;
+    right: 15%;
+    font-size: 45px;
+    text-align: unset;
+}
+.wow{
+    color: white;
+    margin-left: 10%;
+}
+.cards {
+    width: 280px;
+    padding: 10px;
+    text-align: center;
+    background: #101010;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cards a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    background-color: #0c0237;
+}
+.cards img{
+    max-width: 200px;
+}
+.cards:hover{
+    transform: scale(1.03);
+    transition: 0.04s;
+    box-shadow: 0px 0px 36px -25px rgba(255,255,255,1);
+}
+.destacado{
+    display: flex;
+    float: inline-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+}
+.navbar ul{
+    list-style: none;
+    text-align: center;
+}
+.navbar li a{
+    color: white;
+}
+.navbar{
+    background-color: #0e0e0e;
+    position: relative;
+    z-index: +10;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.links li{
+    font-size: 19px;
+    margin-right: 56px;
+    display: inline-block;
+}
+.links li a{
+    text-decoration: none;
+    display: block;
+}
+.links li a:hover{
+    transform: scale(1.2);
+    transition: 500ms;
+}
+.icons{
+    position: absolute;
+    top: 64px;
+    right: 11px;
+}
+.icons li{
+    cursor: pointer;
+    font-size: 26px;
+    margin-right: 14px;
+    display: inline-block;
+}
+.icons li a{
+    text-decoration: none;
+}
+.icons span{
+    padding: 5px;
+    background: red;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    display: block;
+    right: 0;
+    margin-right: 0;
+    top: -15px;
+    color: white;
+}
+.catalog {
+    display: flex;
+    float: inline-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: calc(100% - 280px);
+    justify-content: center;
+}
+.sidebar {
+    display: inline-flex;
+    max-width: min-content;
+    top: 135px;
+    margin-top: 0;
+    font-size: 12px;
+    background-color: rgb(35 35 35);
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-top: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+}
+.sidebar a{
+    text-decoration: none;
+    color: rgb(218, 218, 218);
+    position: relative;
+}
+/* .sidebar a:hover{
+    text-decoration: underline;
+} */
+.sidebar a::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background: white;
+    transition: width .2s;
+}
+.sidebar a:hover::after{
+    width: 100%;
+}
+.info img{
+    padding: 16px;
+    max-height: 330px;
+    border-top: 1px solid black;
+    padding: 11px;
+}
+.info{
+    display: inline-block;
+    max-width: 50%;
+    text-overflow: clip;
+}
+.moreInfo{
+    display: inline-block;
+    float: right;
+    max-width: 50%;
+    font-weight: 600;
+}
+.moreInfo li{
+    margin-bottom: 20px;
+}
+.cartProd{
+    border-bottom: 1px solid #ffffff2e;
+    width: 70%;
+    padding-top: 20px;
+    margin-left: 20px;
+}
+.cartProd img{
+    max-height: 110px;
+    border-right: 1px solid #ffffff2e;
+}
+.cartProd h1{
+    font-size: 15px;
+    display: inline-block;
+    position: absolute;
+    margin-left: 20px;
+}
+.cartProd h2{
+    display: inline-block;
+    position: absolute;
+    right: 30%;
+}
+.cartProd a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    background-color: #0c0237;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+.right-bar{
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    right: 30px;
+}
+.right-bar button{
+    background: none;
+	border: none;
+    font-family: 'Swiss 721 BT';
+    font-size: 17px;
+	padding: 0;
+	cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    background-color: #0c0237;
+}
+.cant{
+    padding: 5px;
+    background: red;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    display: block;
+    right: 0;
+    margin-right: 0;
+    top: -15px;
+}

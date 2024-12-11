@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 function Cart({ cart, setCart }) {
   const newCart = cart.flatMap((c) => c);
@@ -20,6 +21,7 @@ function Cart({ cart, setCart }) {
   }
   function deleteProd(id){
     const updCart = newCart.filter(e => e.id  !==id)
+    console.log(updCart)
     setCart(updCart)
     localStorage.setItem('cart', JSON.stringify(updCart))
   }
@@ -27,6 +29,7 @@ function Cart({ cart, setCart }) {
   return (
     <>
       <Navbar />
+      <div className="cartWrapper">
       <h1>Carrito de Compras</h1>
       {newCart.map((c) => (
         <div className="cartProd">
@@ -34,13 +37,15 @@ function Cart({ cart, setCart }) {
           <h1>{c.prod}</h1>
           <h2>precio: ${c.price}</h2>
           <Link to={`/products/${c.id}`}>Ver producto</Link>
-          <button onClick={deleteProd}>Eliminar</button>
+          {/* <button onClick={() => deleteProd(c.id)}>Eliminar</button>  */}
         </div>
       ))}
       <div className="right-bar">
         <button onClick={handleSubmit}>Vaciar Carrito</button>
         <h1>Total: ${finalSum}</h1>
       </div>
+      </div>
+      <Footer />
     </>
   );
 }
